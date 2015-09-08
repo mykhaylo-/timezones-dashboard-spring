@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TimeZones dashboard - Registration page</title>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../static/css/main.css" th:href="@{css/main.css}" />
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <div th:if="${param.error}">
+            Form submission error
+        </div>
+
+        <form action="#" th:action="@{/register}" th:object="${user}"  method="post">
+            <div class="form-error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div>
+            <div><label> Name: <input type="text" th:field="*{name}"/> </label></div>
+            <div class="form-error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username error</div>
+            <div><label> Username: <input type="text" th:field="*{username}"/> </label></div>
+            <div class="form-error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password error</div>
+            <div><label> Password: <input type="password" th:field="*{password}"/> </label></div>
+            <div><input type="submit" value="Register"/></div>
+        </form>
+    </body>
+</html>

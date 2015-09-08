@@ -1,0 +1,5 @@
+.form-error {
+    color: red;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

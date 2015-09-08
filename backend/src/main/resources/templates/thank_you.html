@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>TimeZones dashboard - registration complete</title>
+</head>
+<body>
+<h1>Registration complete</h1>
+<p th:text="'Thank you, ' + ${user.name} + ', for registering to our service.'" />
+<p>You can now login <a th:href="@{/login}">here</a></p>
+</body>
+</html>
